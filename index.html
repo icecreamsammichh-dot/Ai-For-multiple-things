@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Creative Suite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "jszip": "https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.esm.js"
+  }
+}
+</script>
+<style>
+  :root {
+    --color-bg: #111827; /* gray-900 */
+    --color-text: #f3f4f6; /* gray-100 */
+    --color-panel-bg: #1f2937; /* gray-800 */
+    --color-border: #374151; /* gray-700 */
+    --color-input-bg: #374151; /* gray-700 */
+    --color-primary: #22d3ee; /* cyan-400 */
+    --color-primary-accent: #06b6d4; /* cyan-500 */
+    --color-primary-text: #ffffff;
+  }
+  .theme-light {
+    --color-bg: #f3f4f6; /* gray-100 */
+    --color-text: #111827; /* gray-900 */
+    --color-panel-bg: #ffffff;
+    --color-border: #d1d5db; /* gray-300 */
+    --color-input-bg: #e5e7eb; /* gray-200 */
+    --color-primary: #0891b2; /* cyan-600 */
+    --color-primary-accent: #06b6d4; /* cyan-500 */
+    --color-primary-text: #ffffff;
+  }
+  .theme-cyberpunk {
+    --color-bg: #0d0221;
+    --color-text: #00f6ff;
+    --color-panel-bg: #26174a;
+    --color-border: #ff00f5;
+    --color-input-bg: #150a2e;
+    --color-primary: #f8e635;
+    --color-primary-accent: #ff00f5;
+    --color-primary-text: #0d0221;
+  }
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  /* Additional component-specific overrides can go here if needed */
+  @keyframes speak-1 {
+      0%, 100% { transform: scaleY(0.4); }
+      50% { transform: scaleY(1); }
+  }
+  @keyframes speak-2 {
+      0%, 100% { transform: scaleY(0.2); }
+      50% { transform: scaleY(0.8); }
+  }
+  @keyframes speak-3 {
+      0%, 100% { transform: scaleY(0.5); }
+      50% { transform: scaleY(0.9); }
+  }
+  .speaking-bar-1 { animation: speak-1 1.2s infinite ease-in-out; animation-delay: 0s; }
+  .speaking-bar-2 { animation: speak-2 1.2s infinite ease-in-out; animation-delay: 0.2s; }
+  .speaking-bar-3 { animation: speak-3 1.2s infinite ease-in-out; animation-delay: 0.4s; }
+</style>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

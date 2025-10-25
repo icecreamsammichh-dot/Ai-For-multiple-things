@@ -1,0 +1,9 @@
+{
+  "name": "AI Assistant (Screen sharing and chat bots available) ",
+  "description": "Share your screen and have a real-time voice conversation with an AI assistant that can see your screen content, provide guidance, and discuss various topics with you.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera",
+    "display-capture"
+  ]
+}
